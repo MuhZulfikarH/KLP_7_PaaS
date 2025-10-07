@@ -1,0 +1,85 @@
+/* Body dan container */
+.custom-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-container {
+    margin-top: 20px;
+}
+
+/* Heading */
+.custom-heading {
+    color: #222;
+    font-weight: bold;
+}
+
+/* Form */
+.custom-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.custom-label {
+    font-weight: 600;
+}
+
+.custom-input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Tombol */
+.custom-btn {
+    border-radius: 5px;
+    padding: 6px 15px;
+    margin-right: 5px;
+}
+
+/* Hyperlink */
+.custom-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.custom-link:hover {
+    text-decoration: underline;
+}
+
+/* Tabel */
+.custom-table {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.custom-table-head th {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.custom-table-row td {
+    padding: 10px;
+}
+
+/* Alert */
+.custom-alert {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Navbar title */
+.navbar-title {
+    color: #fff;
+    font-weight: bold;
+    cursor: default;
+}
+
+.navbar-title:hover {
+    color: #fff;
+    text-decoration: none;
+}

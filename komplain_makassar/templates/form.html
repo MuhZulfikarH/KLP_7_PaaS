@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block title %}Tambah Komplain{% endblock %}
+{% block content %}
+<h3 class="mb-3 custom-heading">Tambah Komplain</h3>
+
+<form method="POST" action="{{ url_for('tambah') }}" class="custom-form">
+  <div class="mb-3">
+    <label class="form-label custom-label">Nama</label>
+    <input type="text" name="nama" class="form-control custom-input" required>
+  </div>
+  
+  <div class="mb-3">
+    <label class="form-label custom-label">Email</label>
+    <input type="email" name="email" class="form-control custom-input" required>
+  </div>
+  
+  <div class="mb-3">
+    <label class="form-label custom-label">Kategori</label>
+    <select name="kategori" class="form-select custom-input" required>
+        <option value="">-- Pilih Kategori --</option>
+        <option value="Pegawai">Pegawai</option>
+        <option value="Infrastruktur">Infrastruktur</option>
+        <option value="Pelayanan">Pelayanan</option>
+        <option value="Lainnya">Lainnya</option>
+    </select>
+  </div>
+  
+  <div class="mb-3">
+    <label class="form-label custom-label">Pesan</label>
+    <textarea name="pesan" class="form-control custom-input" rows="4" required></textarea>
+  </div>
+  
+  <button type="submit" class="btn btn-primary custom-btn">Kirim</button>
+  <a href="{{ url_for('index') }}" class="btn btn-secondary custom-btn">Kembali</a>
+</form>
+{% endblock %}

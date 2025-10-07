@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block title %}Daftar Komplain{% endblock %}
+{% block content %}
+<h3 class="mb-3 custom-heading">Daftar Komplain</h3>
+
+<table class="table table-bordered table-striped custom-table">
+    <thead class="table-dark custom-table-head">
+        <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Kategori</th>
+            <th>Pesan</th>
+            <th>Aksi</th> <!-- kolom aksi -->
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in data %}
+        <tr class="custom-table-row">
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td class="text-center">
+                <!-- Tombol hapus satu komplain -->
+                <a href="{{ url_for('hapus', komplain_id=row[0]) }}" 
+                   class="btn btn-outline-danger btn-sm" 
+                   onclick="return confirm('Yakin ingin menghapus komplain ini?');">
+                   🗑️
+                </a>
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="6" class="text-center text-muted">Belum ada data</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
