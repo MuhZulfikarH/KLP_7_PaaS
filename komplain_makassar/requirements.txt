@@ -1,2 +1,1 @@
-Flask
-Flask-MySQLdb
+Flask==2.3.3

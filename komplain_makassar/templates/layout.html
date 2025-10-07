@@ -12,19 +12,20 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <span class="navbar-brand navbar-title">Pemerintahan Makassar</span>
-    <span class="navbar-brand navbar-title">FORM KOMPLAIN</span>
     <div>
+      {% if not hide_nav_buttons %}
       <!-- Tombol Tambah Komplain -->
       <a class="btn btn-outline-light btn-sm custom-btn" href="{{ url_for('tambah') }}">
         Tambah Komplain
       </a>
 
-      <!-- Tombol Batalkan Semua Komplain dengan konfirmasi -->
+      <!-- Tombol Batalkan Semua Komplain -->
       <a class="btn btn-outline-danger btn-sm custom-btn" 
          href="{{ url_for('batalkan') }}" 
          onclick="return confirm('Yakin untuk menghapus semua komplain ini?');">
         Batalkan Komplain
       </a>
+      {% endif %}
     </div>
   </div>
 </nav>
@@ -39,7 +40,6 @@
       {% endif %}
     {% endwith %}
 
-    <!-- Konten halaman -->
     {% block content %}{% endblock %}
 </div>
 

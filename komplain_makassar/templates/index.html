@@ -11,23 +11,22 @@
             <th>Email</th>
             <th>Kategori</th>
             <th>Pesan</th>
-            <th>Aksi</th> <!-- kolom aksi -->
+            <th>Aksi</th>
         </tr>
     </thead>
     <tbody>
         {% for row in data %}
         <tr class="custom-table-row">
-            <td>{{ row[0] }}</td>
-            <td>{{ row[1] }}</td>
-            <td>{{ row[2] }}</td>
-            <td>{{ row[3] }}</td>
-            <td>{{ row[4] }}</td>
+            <td>{{ row['id'] }}</td>
+            <td>{{ row['nama'] }}</td>
+            <td>{{ row['email'] }}</td>
+            <td>{{ row['kategori'] }}</td>
+            <td>{{ row['pesan'] }}</td>
             <td class="text-center">
-                <!-- Tombol hapus satu komplain -->
-                <a href="{{ url_for('hapus', komplain_id=row[0]) }}" 
+                <a href="{{ url_for('hapus', komplain_id=row['id']) }}" 
                    class="btn btn-outline-danger btn-sm" 
                    onclick="return confirm('Yakin ingin menghapus komplain ini?');">
-                   🗑️
+                   batalkan
                 </a>
             </td>
         </tr>
